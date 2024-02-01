@@ -1,2 +1,2 @@
 # Algorithms
-Harvard CS50's Problem Sets' Solutions
+Harvard CS50's Problem Sets' and Data Structers' Solutions
