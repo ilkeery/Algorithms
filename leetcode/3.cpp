@@ -31,3 +31,27 @@ public:
         return max;
     }
 };
+// Less memory usage
+class Solution
+{
+public:
+    vector<bool> kidsWithCandies(vector<int> &candies, int extraCandies)
+    {
+        int num_kids = candies.size();
+        std::vector<bool> b_hasGreatest(num_kids);
+        int max_num_candies = *max_element(candies.begin(), candies.end());
+
+        for (int iter = 0; iter < num_kids; iter++)
+        {
+            if (max_num_candies <= candies[iter] + extraCandies)
+            {
+                b_hasGreatest[iter] = true;
+            }
+            else
+            {
+                b_hasGreatest[iter] = false;
+            }
+        }
+        return b_hasGreatest;
+    }
+};
